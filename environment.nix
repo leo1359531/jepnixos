@@ -1,5 +1,8 @@
 {options, ...}: {
   # Defaults apps
+  xdg.mime.defaultApplications = {
+    "application/pdf" = "firefox.desktop";
+  };
   environment.variables = rec {
     EDITOR = "nvim";
     BROWSER = "firefox";

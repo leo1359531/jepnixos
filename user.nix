@@ -4,7 +4,7 @@
     isNormalUser = true;
     description = "leo";
     extraGroups = ["networkmanager" "wheel" "video" "libvirtd" "docker"];
-    shell = pkgs.bash;
+    shell = pkgs.zsh;
     packages = with pkgs; [];
   };
 }

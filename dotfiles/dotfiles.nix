@@ -6,6 +6,11 @@
       source = ./bin;
       target = "bin";
     };
+    "i3" = {
+      recursive = true;
+      source = ./i3;
+      target = "i3";
+    };
     "imgs" = {
       recursive = true;
       source = ./imgs;
@@ -25,6 +30,16 @@
       recursive = true;
       source = ./nvim;
       target = "nvim";
+    };
+    "picom" = {
+      recursive = true;
+      source = ./picom;
+      target = "picom";
+    };
+    "polybar" = {
+      recursive = true;
+      source = ./polybar;
+      target = "polybar";
     };
     "rick" = {
       recursive = true;

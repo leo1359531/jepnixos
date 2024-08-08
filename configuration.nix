@@ -6,6 +6,7 @@
     ./environment.nix # environment settings IMPORTANT
     ./hardware-configuration.nix # Include the results of the hardware scan.
     ./home.nix # Home Manager
+    ./i3.nix # i3
     ./my-pkgs # custom pkgs
     ./network.nix # very important
     ./nixConfig.nix # nix settings

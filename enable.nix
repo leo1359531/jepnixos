@@ -1,12 +1,8 @@
 {pkgs, ...}: {
   # Virt-Manager
-  virtualisation.docker.enable = false;
+  virtualisation.docker.enable = true;
   virtualisation.libvirtd.enable = true;
   programs.dconf.enable = true;
-
-  # SSH
-  programs.ssh.forwardX11 = true;
-  programs.ssh.setXAuthLocation = true;
 
   # SSH angent
   programs.ssh.startAgent = true;
@@ -16,6 +12,17 @@
     enable = true;
     defaultEditor = true;
   };
+
+  programs.zsh = {
+    enable = true;
+    ohMyZsh = {
+      enable = true;
+      plugins = ["git" "thefuck"];
+      theme = "robbyrussell";
+    };
+  };
+
+  environment.pathsToLink = [ "/share/zsh" ]; # for zsh autocompletion
 
   # File manager
   programs.thunar.enable = true;
@@ -101,4 +108,16 @@
   # Android
   programs.adb.enable = true;
   users.users.leo.extraGroups = ["adbusers"];
+
+  services.udev.packages = [
+    (pkgs.writeTextFile {
+      name = "numworks";
+      text = ''
+        SUBSYSTEM=="usb", ATTR{idVendor}=="0483", ATTR{idProduct}=="a291", TAG+="uaccess"
+        SUBSYSTEM=="usb", ATTR{idVendor}=="0483", ATTR{idProduct}=="df11", TAG+="uaccess"
+      '';
+
+      destination = "/etc/udev/rules.d/50-numwork-calculator.rules";
+    })
+  ];
 }

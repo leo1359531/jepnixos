@@ -3,8 +3,8 @@
   pkgs,
   ...
 }: let
-  # home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/master.tar.gz";
-  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-24.05.tar.gz";
+  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/master.tar.gz";
+  # home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-24.05.tar.gz";
 in {
   imports = [
     (import "${home-manager}/nixos")
@@ -14,7 +14,7 @@ in {
     /*
     The home.stateVersion option does not have a default and must be set
     */
-    home.stateVersion = "23.11";
+    home.stateVersion = "24.05";
 
     programs.bash = {
       enable = true;
@@ -43,6 +43,36 @@ in {
         duu = "du --max-depth=1 -h";
         edit = "cd /etc/nixos";
         ilmatar = "ssh -p 59743 vainamoinen@dreams.scatcat.online";
+        thor = "ssh -p 42938 benedetta@thor";
+        j = "autojump";
+        l = "exa -ahl";
+        ll = "ls -l";
+        lsblk = "lsblk -o NAME,FSTYPE,SIZE,FSUSED,LABEL,MOUNTPOINT,RM,RO,UUID";
+        rm = "trash";
+        update = "sudo nixos-rebuild switch";
+        v = "nvim";
+      };
+    };
+
+    programs.zsh = {
+      enable = true;
+      enableCompletion = true;
+      history.ignoreAllDups = true;
+      history.ignoreSpace = true;
+      history.share = true;
+      syntaxHighlighting.enable = true;
+      # complete -cf doas enables autocomplete with doas
+      initExtra = ''
+        complete -cf doas
+        nofetch -UwU
+      '';
+      shellAliases = {
+        add = "ssh-add ~/.ssh/starless";
+        c = "clear && fast-sl && clear";
+        duu = "du --max-depth=1 -h";
+        edit = "cd /etc/nixos";
+        ilmatar = "ssh -p 59743 vainamoinen@dreams.scatcat.online";
+        thor = "ssh -p 42938 benedetta@thor";
         j = "autojump";
         l = "exa -ahl";
         ll = "ls -l";

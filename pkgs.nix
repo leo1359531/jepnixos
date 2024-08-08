@@ -17,6 +17,7 @@
     # Cli
     alsa-lib # library for alsa
     alsa-utils # some audio utils like aplay
+    appimage-run # run appimage
     autojump # cd command that learns
     bat # cat with colors
     bc # calculator -> for the watt script
@@ -43,6 +44,8 @@
     jq # JSON processor
     linuxKernel.packages.linux_6_6.turbostat # cpu stats
     lolcat # rainbow
+    man-pages # man
+    man-pages-posix # man 2
     msr-tools # edit cpu parameters
     neofetch # system info
     num-utils # random
@@ -50,6 +53,7 @@
     pamixer # set volume
     pciutils # pci ultis
     pulseaudio # for pactl
+    qt5.qtwayland
     rclone # for nexcloud sync
     ripgrep # rust written grep
     s-tui # cpu monitoring and stress test
@@ -57,6 +61,7 @@
     stdenv # C compilers
     stress-ng # stress test
     texlive.combined.scheme-full # latex
+    thefuck # yeah
     trash-cli # trash for terminal
     tree # ls files in folders
     usbutils # lsusb
@@ -101,6 +106,7 @@
     strawberry # music payer
     thunderbird # mail
     virt-manager # virtual machines
+    zed-editor # IDE
 
     # Audio
     vmpk
@@ -108,6 +114,7 @@
     qpwgraph
 
     # Non-free
+    bambu-studio
     matlab
     spotify
     telegram-desktop
@@ -172,9 +179,9 @@
     samba # smbclient
     thc-hydra # ssh and other protocols
 
-    # Octave
-    (octave.withPackages
-      (opkgs: with opkgs; [symbolic]))
+    # # Octave
+    # (octave.withPackages
+    #   (opkgs: with opkgs; [symbolic]))
 
     # Android
     android-tools

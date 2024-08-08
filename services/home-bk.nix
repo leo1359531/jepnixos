@@ -10,7 +10,7 @@
       after = ["multi-user.target"];
       timerConfig = {
         OnBootSec = "5m";
-        OnUnitActiveSec = "1h";
+        OnUnitActiveSec = "24h";
         Unit = "homebk.service";
       };
     };
