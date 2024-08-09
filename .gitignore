@@ -1,7 +1,4 @@
 # ignore files from pubblic github repo
 hardware-configuration.nix
-theme/
 dotfiles/bin/bk
-dotfiles/spotifyd/
-dotfiles/spotify-tui/
 

@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 "$HOME/.config/polybar/launch.sh"
-picom -b
+pkill picom && sleep 1 && picom -b
