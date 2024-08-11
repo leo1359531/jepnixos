@@ -1,4 +1,14 @@
 #!/usr/bin/env bash
 
-"$HOME/.config/polybar/launch.sh"
-pkill picom && sleep 1 && picom -b
+pkill polybar
+polybar top 2>&1 | tee -a /tmp/polybar.log & disown
+
+pkill dunst
+dunst & disown
+
+pkill picom
+
+while ! pidof picom; do
+  picom -b & disown
+  sleep 1
+done

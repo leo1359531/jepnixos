@@ -20,11 +20,11 @@ hide_edge_borders smart_no_gaps
 # colors
 
 # set
-set $main #7e9cd8
+set $main #af5fd7
 set $inactive #c8c093
-set $fg #dcd7ba
-set $bg #1f1f28
-set $urgent #e82424
+set $fg #e4e4e4
+set $bg #000000
+set $urgent #d75f00
 
 
 # class                 border  backgr. text    indicator child_border
@@ -56,7 +56,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term wezterm
+set $term alacritty
 # Your preferred browser
 set $browser firefox
 # Your preferred filemanager
@@ -71,18 +71,14 @@ set $power rofi_logout
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg /home/leo/Pictures/Wallpapers/lap.jpg fill
-exec --no-startup-id feh --bg-fill ~/.config/imgs/set-wallpaper/sega.jpg
-exec --no-startup-id polybar
-exec --no-startup-id picom
+exec --no-startup-id feh --bg-fill ~/.config/imgs/set-wallpaper/purple.png
+exec --no-startup-id reload
 
 ### Idle configuration
 
-bindsym $mod+Shift+o exec i3-msg "output * dpms off" && kb-light-of
-bindsym $mod+Shift+i exec i3-msg "output * dpms on" && kb-light-on
-
-bindsym $mod+o exec i3-msg "output eDP-1 disable" && kb-light-off
-bindsym $mod+i exec i3-msg "output eDP-1 enable" && kb-light-on
-bindsym $mod+m exec i3-msg "output eDP-1 enable" && swaylock -f
+bindsym $mod+o exec xrandr --output $laptop --off && kb-light-off
+bindsym $mod+i exec xrandr --output $laptop --auto && kb-light-on && sleep 1 && reload
+bindsym $mod+m exec xrandr -d :0 --output $laptop --auto && i3lock
 
 ### Key bindings
 #
@@ -109,7 +105,7 @@ bindsym $mod+m exec i3-msg "output eDP-1 enable" && swaylock -f
        bindsym $mod+x exec $power
 
 # Start nmtui
-       bindsym $mod+u exec $term start nmtui
+       # bindsym $mod+u exec $term start nmtui
 
 # Start blueman
 # bindsym $mod+y exec blueman-manager
@@ -159,9 +155,6 @@ bindsym $mod+m exec i3-msg "output eDP-1 enable" && swaylock -f
        bindsym $alt+$right workspace next
        bindsym $alt+a workspace prev
        bindsym $alt+d workspace next
-
-# sov
-exec rm -f /tmp/sovpipe && mkfifo /tmp/sovpipe && tail -f /tmp/sovpipe | sov
 
 # Switch to workspace
        bindsym $mod+1 workspace number 1

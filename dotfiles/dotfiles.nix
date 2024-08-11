@@ -1,10 +1,20 @@
 {
   # Config
   xdg.configFile = {
+    "alacritty" = {
+      recursive = true;
+      source = ./alacritty;
+      target = "alacritty";
+    };
     "bin" = {
       recursive = true;
       source = ./bin;
       target = "bin";
+    };
+    "dunst" = {
+      recursive = true;
+      source = ./dunst;
+      target = "dunst";
     };
     "i3" = {
       recursive = true;
@@ -60,6 +70,11 @@
       recursive = true;
       source = ./swaylock;
       target = "swaylock";
+    };
+    "tmux" = {
+      recursive = true;
+      source = ./tmux;
+      target = "tmux";
     };
     "waybar" = {
       recursive = true;

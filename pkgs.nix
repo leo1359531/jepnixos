@@ -159,13 +159,15 @@
     beautysh # sh
     black # python
     codespell # spell check
+    glow # md previewer
     isort # python
     jq # json
     nodePackages_latest.prettier # prettier
     python311Packages.mdformat # python
     stylua # lua
-    glow # md previewer
+    taplo # toml
     tree-sitter # for nvim
+
 
     # HTB
     aircrack-ng # wifi

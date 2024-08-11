@@ -63,7 +63,7 @@ in {
       syntaxHighlighting.enable = true;
       # complete -cf doas enables autocomplete with doas
       initExtra = ''
-        complete -cf doas
+        if [ "$TMUX" = "" ]; then tmux; fi
         nofetch -UwU
       '';
       shellAliases = {
@@ -77,7 +77,7 @@ in {
         l = "exa -ahl";
         ll = "ls -l";
         lsblk = "lsblk -o NAME,FSTYPE,SIZE,FSUSED,LABEL,MOUNTPOINT,RM,RO,UUID";
-        rm = "trash";
+        rr = "trash";
         update = "sudo nixos-rebuild switch";
         v = "nvim";
       };
@@ -107,7 +107,6 @@ in {
       userEmail = "leos1359531@gmail.com";
     };
 
-    # Theme selector
     imports = [
       ./dotfiles/dotfiles.nix
     ];

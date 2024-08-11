@@ -25,12 +25,14 @@
         enable = true;
         package = pkgs.i3-rounded;
         extraPackages = with pkgs; [
-          i3lock #default i3 screen locker
-          i3status # gives you the default i3 status bar
-          picom
-          polybar
-          polybar-pulseaudio-control
-          rofi
+          dunst # notification program
+          i3lock-fancy #default i3 screen locker
+          libnotify # notification lib
+          picom # compositor
+          polybar # bar
+          polybar-pulseaudio-control # pipewire on the bar
+          rofi # launcher
+          xautolock # logout manager
         ];
       };
     };

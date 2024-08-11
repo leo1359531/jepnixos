@@ -277,20 +277,70 @@ require("kanagawa").setup({
     light = "lotus",
   },
 })
+-- custom theme
 
 vim.cmd.colorscheme("kanagawa")
 
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 vim.api.nvim_set_hl(0, "LineNr", { bg = "none" })
-vim.api.nvim_set_hl(0, "LineNr", { fg = "#C8C093" })
+vim.api.nvim_set_hl(0, "LineNr", { fg = "#e4e4e4" })
 
 -- Lualine
+
+local lua_line_theme = require("lualine.themes.gruvbox")
+
+-- Change the background of lualine_c section for normal mode
+local colors = {
+  black = "#000000",
+  white = "#e4e4e4",
+  red = "#c01020",
+  green = "#98c66c",
+  blue = "#00afbf",
+  yellow = "#dfd750",
+  purple = "#af5fd7",
+  orange = "#d75f00",
+  gray = "#444444",
+}
+
+lua_line_theme = {
+  normal = {
+    a = { bg = colors.purple, fg = colors.black, gui = "bold" },
+    b = { bg = colors.black, fg = colors.purple },
+    c = { bg = colors.black, fg = colors.purple },
+  },
+  insert = {
+    a = { bg = colors.blue, fg = colors.black, gui = "bold" },
+    b = { bg = colors.black, fg = colors.blue },
+    c = { bg = colors.black, fg = colors.blue },
+  },
+  visual = {
+    a = { bg = colors.yellow, fg = colors.black, gui = "bold" },
+    b = { bg = colors.black, fg = colors.yellow },
+    c = { bg = colors.black, fg = colors.yellow },
+  },
+  replace = {
+    a = { bg = colors.orange, fg = colors.black, gui = "bold" },
+    b = { bg = colors.black, fg = colors.orange },
+    c = { bg = colors.black, fg = colors.orange },
+  },
+  command = {
+    a = { bg = colors.green, fg = colors.black, gui = "bold" },
+    b = { bg = colors.black, fg = colors.green },
+    c = { bg = colors.black, fg = colors.green },
+  },
+  inactive = {
+    a = { bg = colors.gray, fg = colors.purple, gui = "bold" },
+    b = { bg = colors.black, fg = colors.purple },
+    c = { bg = colors.black, fg = colors.purple },
+  },
+}
+
 vim.opt.showmode = false
 
 require("lualine").setup({
   options = {
-    theme = "auto",
+    theme = lua_line_theme,
     icons_enabled = true,
     component_separators = { left = "", right = "" },
     section_separators = { left = "", right = "" },
@@ -307,13 +357,6 @@ require("nvim-web-devicons").setup({})
 vim.opt.list = true
 vim.opt.listchars:append("eol:↴")
 
--- require("ibl").setup({
---   debounce = 100,
---   indent = { char = "|" },
---   whitespace = { highlight = { "Whitespace", "NonText" } },
---   scope = { exclude = { language = { "lua" } } },
--- })
-
 -- Treesitter
 require("nvim-treesitter.configs").setup({
   highlight = {
@@ -322,6 +365,9 @@ require("nvim-treesitter.configs").setup({
   indent = {
     enable = true,
   },
+  sync_install = false,
+  auto_install = true,
+  ignore_install = {},
   ensure_installed = {
     "bash",
     "c",
@@ -334,8 +380,10 @@ require("nvim-treesitter.configs").setup({
     "nix",
     "python",
     "rust",
+    "toml",
     "yaml",
   },
+
   incremental_selection = {
     enable = true,
     keymaps = {
@@ -487,8 +535,8 @@ require("toggleterm").setup({
 
 -- Colorizer
 require("colorizer").setup({
-  css = { names = false },
-  html = { names = false },
+  -- css = { names = false },
+  -- html = { names = false },
 })
 
 -- Illuminate
@@ -532,6 +580,7 @@ require("conform").setup({
     nix = { "alejandra" },
     python = { "isort", "black" },
     sh = { "beautysh" },
+    toml = { "taplo" },
 
     ["*"] = { "codespell", "trim_whitespace", "trim_newlines" },
   },
@@ -611,10 +660,10 @@ local on_attach = function(_, bufnr)
   nmap("<leader>nn", vim.lsp.buf.rename, "re[n]ame")
   nmap("<leader>oa", vim.lsp.buf.code_action, "c[O]de [A]ction")
 
-  nmap("gd", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition")
+  nmap("gd", require("telescope.builtin").lsp_definitions, "[G]oto [D]definition")
   nmap("gr", require("telescope.builtin").lsp_references, "[G]oto [R]references")
   nmap("gI", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation")
-  nmap("<leader>D", require("telescope.builtin").lsp_type_definitions, "Type [D]efinition")
+  nmap("<leader>D", require("telescope.builtin").lsp_type_definitions, "Type [D]definition")
   nmap("<leader>ds", require("telescope.builtin").lsp_document_symbols, "[D]ocument [S]symbols")
   nmap("<leader>Ws", require("telescope.builtin").lsp_dynamic_workspace_symbols, "[W]orkspace [S]symbols")
 

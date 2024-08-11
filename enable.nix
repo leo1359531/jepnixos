@@ -22,7 +22,20 @@
     };
   };
 
-  environment.pathsToLink = [ "/share/zsh" ]; # for zsh autocompletion
+  environment.pathsToLink = ["/share/zsh"]; # for zsh autocompletion
+
+  programs.tmux = {
+    enable = true;
+    plugins = with pkgs; [
+      tmuxPlugins.battery
+      tmuxPlugins.prefix-highlight
+      tmuxPlugins.online-status
+      tmuxPlugins.sidebar
+      tmuxPlugins.copycat
+      tmuxPlugins.open
+      tmuxPlugins.sysstat
+    ];
+  };
 
   # File manager
   programs.thunar.enable = true;
