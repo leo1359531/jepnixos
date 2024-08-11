@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+pkill feh
+feh --bg-fill ~/.config/imgs/set-wallpaper/purple.png & disown
+
 pkill polybar
 polybar top 2>&1 | tee -a /tmp/polybar.log & disown
 
