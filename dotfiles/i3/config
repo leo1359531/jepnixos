@@ -87,7 +87,7 @@ exec_always --no-startup-id xss-lock --transfer-sleep-lock -- ~/.config/bin/lock
 bindsym $mod+m mode "lock"
 
 mode "lock" {
-    bindsym l exec i3lock-fancy, mode "default"
+    bindsym l exec i3lock-fancy -f ComicShannsMono-Nerd-Font, mode "default"
     # just force suspend. i3lock will be called automatically via lock.sh
     bindsym s exec --no-startup-id sleep 1 && xset dpms force suspend , mode "default"
 }
