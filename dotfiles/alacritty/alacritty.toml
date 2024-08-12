@@ -46,7 +46,7 @@ foreground = "#e4e4e4"
 background = "#000000"
 
 [colors]
-cursor = { text = "#000000", cursor = "#00afbf" }
+cursor = { text = "#000000", cursor = "#af5fd7" }
 
 [bell]
 duration = 0

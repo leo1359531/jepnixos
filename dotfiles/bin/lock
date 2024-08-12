@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-swaymsg "output eDP-1 enable"
-pkill spotufyd
-
-swaylock
+set -e
+i3lock-fancy
+xset dpms

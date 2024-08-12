@@ -32,7 +32,7 @@
           polybar # bar
           polybar-pulseaudio-control # pipewire on the bar
           rofi # launcher
-          xautolock # logout manager
+          xss-lock # lock
         ];
       };
     };

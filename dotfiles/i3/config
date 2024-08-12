@@ -78,7 +78,19 @@ exec --no-startup-id reload
 
 bindsym $mod+o exec xrandr --output $laptop --off && kb-light-off
 bindsym $mod+i exec xrandr --output $laptop --auto && kb-light-on && sleep 1 && reload
-bindsym $mod+m exec xrandr -d :0 --output $laptop --auto && i3lock
+# bindsym $mod+m exec xrandr -d :0 --output $laptop --auto && i3lock
+
+# Setup xss-lock daemon
+exec_always --no-startup-id xset +dpms dpms 0 300 300
+exec_always --no-startup-id xss-lock --transfer-sleep-lock -- ~/.config/bin/lock
+
+bindsym $mod+m mode "lock"
+
+mode "lock" {
+    bindsym l exec i3lock-fancy, mode "default"
+    # just force suspend. i3lock will be called automatically via lock.sh
+    bindsym s exec --no-startup-id sleep 1 && xset dpms force suspend , mode "default"
+}
 
 ### Key bindings
 #
