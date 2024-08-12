@@ -1,18 +1,18 @@
 # i3 config file (v4)
 # font
-font pango:ComicShannsMonoNerdFont 11
+font pango:ComicShannsMonoNerdFont 2
 
 # border & title
-default_border pixel 2
+# default_border pixel 6
 # for_window [title="^.*"] title_format ""
-for_window [class="^.*"] border pixel 2, title_format "<b> %class >> %title </b>"
+# for_window [class="^.*"] border pixel 2, title_format "<b> %class: %title </b>"
+for_window [class="^.*"] border pixel 1, title_format "<b></b>"
 
 # gaps
 gaps inner 0
 gaps outer 5
 smart_gaps on
 
-# border_radius 20
 hide_edge_borders smart_no_gaps
 # smart_borders on
 
