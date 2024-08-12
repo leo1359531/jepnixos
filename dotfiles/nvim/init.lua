@@ -160,10 +160,16 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   -- Themes
+  { "Mofiqul/dracula.nvim", priority = 1000 },
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   { "ellisonleao/gruvbox.nvim", priority = 1000 },
   { "folke/tokyonight.nvim", priority = 1000 },
   { "rebelot/kanagawa.nvim", priority = 1000 },
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  {
+    "rktjmp/lush.nvim",
+    -- if you wish to use your own colorscheme:
+    -- { dir = '/absolute/path/to/colorscheme', lazy = true },
+  },
 
   -- No config
   { "tpope/vim-fugitive" }, -- git command from vim
@@ -264,7 +270,7 @@ require("lazy").setup({
 
 -- Tokyonight
 -- vim.opt.termguicolors = true
--- vim.cmd.colorscheme('tokyonight')
+-- vim.cmd.colorscheme("tokyonight")
 
 -- Gruvbox
 -- vim.o.background = "dark" -- or "light" for light mode
@@ -277,6 +283,11 @@ require("kanagawa").setup({
     light = "lotus",
   },
 })
+
+-- Dracula
+-- Lua:
+-- vim.cmd.colorscheme("dracula")
+
 -- custom theme
 
 vim.cmd.colorscheme("kanagawa")
@@ -534,10 +545,7 @@ require("toggleterm").setup({
 })
 
 -- Colorizer
-require("colorizer").setup({
-  -- css = { names = false },
-  -- html = { names = false },
-})
+require("colorizer").setup()
 
 -- Illuminate
 require("illuminate").configure({})
