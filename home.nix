@@ -154,9 +154,9 @@ in {
             #main-window[uidensity="touch"] #titlebar { height: 3.35em !important; }
             #main-window[uidensity="compact"] #titlebar { height: 2.7em !important; }
             /* Hidden state: Hide native tabs strip */
-            #main-window[titlepreface*="XXX"] #titlebar { height: 0 !important; }
+            #main-window[titlepreface*="‎"] #titlebar { height: 0 !important; }
             /* Hidden state: Fix z-index of active pinned tabs */
-            #main-window[titlepreface*="XXX"] #tabbrowser-tabs { z-index: 0 !important; }
+            #main-window[titlepreface*="‎"] #tabbrowser-tabs { z-index: 0 !important; }
 
           '';
           search = {
