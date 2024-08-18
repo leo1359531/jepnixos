@@ -3,16 +3,76 @@
   pkgs,
   callPackage,
   ...
-}: {
-  environment.pathsToLink = ["/libexec"]; # links /libexec from derivations to /run/current-system/sw
-  hardware.graphics = {
+}: let
+  lock-false = {
+    Value = false;
+    Status = "locked";
+  };
+  lock-true = {
+    Value = true;
+    Status = "locked";
+  };
+  lock-empty-string = {
+    Value = "";
+    Status = "locked";
+  };
+in {
+  programs.firefox = {
     enable = true;
-    extraPackages = with pkgs; [
-      vpl-gpu-rt # for newer GPUs on NixOS >24.05 or unstable
-    ];
+
+    policies = {
+      DisableTelemetry = true;
+      DisableFirefoxStudies = true;
+      DontCheckDefaultBrowser = true;
+      DisablePocket = true;
+      SearchBar = "unified";
+
+      Preferences = {
+        # Privacy settings
+        "extensions.pocket.enabled" = lock-false;
+        "browser.newtabpage.pinned" = lock-empty-string;
+        "browser.topsites.contile.enabled" = lock-false;
+        "browser.newtabpage.activity-stream.showSponsored" = lock-false;
+        "browser.newtabpage.activity-stream.system.showSponsored" = lock-false;
+        "browser.newtabpage.activity-stream.showSponsoredTopSites" = lock-false;
+      };
+
+      ExtensionSettings = {
+        "uBlock0@raymondhill.net" = {
+          install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
+          installation_mode = "force_installed";
+        };
+        "{446900e4-71c2-419f-a6a7-df9c091e268b}" = {
+          install_url = "https://addons.mozilla.org/firefox/downloads/latest/bitwarden-password-manager/latest.xpi";
+          installation_mode = "force_installed";
+        };
+        "{3c078156-979c-498b-8990-85f7987dd929}" = {
+          install_url = "https://addons.mozilla.org/firefox/downloads/latest/sidebery/latest.xpi";
+          installation_mode = "force_installed";
+        };
+        "black" = {
+          install_url = "https://addons.mozilla.org/firefox/downloads/latest/black21/latest.xpi";
+          installation_mode = "force_installed";
+        };
+      };
+    };
   };
 
-  programs.firefox.enable = true;
+  environment.pathsToLink = ["/libexec"]; # links /libexec from derivations to /run/current-system/sw
+  # hardware.graphics = {
+  #   enable = true;
+  #   extraPackages = with pkgs; [
+  #     # vpl-gpu-rt # for newer GPUs on NixOS >24.05 or unstable
+  #   ];
+  # };
+  hardware.opengl = {
+    enable = true;
+    extraPackages = with pkgs; [
+      # vpl-gpu-rt # for newer GPUs on NixOS >24.05 or unstable
+      onevpl-intel-gpu # for newer GPUs on NixOS <= 24.05
+      # intel-media-sdk   # for older GPUs
+    ];
+  };
 
   services = {
     xserver = {

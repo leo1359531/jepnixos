@@ -21,10 +21,10 @@ hide_edge_borders smart_no_gaps
 
 # set
 set $main #af5fd7
-set $inactive #c8c093
-set $fg #e4e4e4
+set $inactive #e6c384
+set $fg #dcd7ba
 set $bg #000000
-set $urgent #d75f00
+set $urgent #e82424
 
 
 # class                 border  backgr. text    indicator child_border

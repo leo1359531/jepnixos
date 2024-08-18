@@ -14,6 +14,8 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
 
+    home-manager
+
     # Cli
     alsa-lib # library for alsa
     alsa-utils # some audio utils like aplay
@@ -48,6 +50,7 @@
     man-pages-posix # man 2
     msr-tools # edit cpu parameters
     neofetch # system info
+    nix-output-monitor # output monitor nix
     num-utils # random
     openvpn # vpn client
     pamixer # set volume

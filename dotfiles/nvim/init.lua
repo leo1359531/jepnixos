@@ -279,7 +279,7 @@ require("lazy").setup({
 -- Kanagawa
 require("kanagawa").setup({
   background = { -- map the value of 'background' option to a theme
-    dark = "wave", -- try "dragon" !
+    dark = "dragon", -- try "dragon" !
     light = "lotus",
   },
 })
@@ -295,7 +295,7 @@ vim.cmd.colorscheme("kanagawa")
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 vim.api.nvim_set_hl(0, "LineNr", { bg = "none" })
-vim.api.nvim_set_hl(0, "LineNr", { fg = "#e4e4e4" })
+-- vim.api.nvim_set_hl(0, "LineNr", { fg = "#e6c384" })
 
 -- Lualine
 
@@ -303,15 +303,15 @@ local lua_line_theme = require("lualine.themes.gruvbox")
 
 -- Change the background of lualine_c section for normal mode
 local colors = {
-  black = "#000000",
-  white = "#e4e4e4",
-  red = "#c01020",
-  green = "#98c66c",
-  blue = "#00afbf",
-  yellow = "#dfd750",
+  black = "#16161d",
+  white = "#dcd7ba",
+  red = "#e82424",
+  green = "#98bb6c",
+  blue = "#7e9cd8",
+  yellow = "#e6c384",
   purple = "#af5fd7",
-  orange = "#d75f00",
-  gray = "#444444",
+  orange = "#ffa066",
+  gray = "#727169",
 }
 
 lua_line_theme = {

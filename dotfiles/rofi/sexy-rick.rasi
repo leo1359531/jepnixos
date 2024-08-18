@@ -6,7 +6,7 @@
 	bordercolor:                    #af5fd7;
 	separatorcolor:                 transparent;
 	normal-background:              transparent;
-	normal-foreground:              #98c66c;
+	normal-foreground:              #98bb6c;
 	selected-background:            #af5fd7;
 	selected-foreground:            #000000;
 	foreground:                     @normal-foreground;
