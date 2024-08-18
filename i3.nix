@@ -85,6 +85,7 @@ in {
         enable = true;
         package = pkgs.i3-rounded;
         extraPackages = with pkgs; [
+          alacritty # backup terminal
           dunst # notification program
           i3lock-fancy #default i3 screen locker
           libnotify # notification lib
