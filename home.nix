@@ -169,18 +169,8 @@ in {
     gtk = {
       enable = true;
       theme = {
-        name = "Catppuccin-Macchiato-Compact-Blue-Dark";
-        package = pkgs.catppuccin-gtk.override {
-          accents = ["blue"];
-          size = "compact";
-          tweaks = ["rimless" "black"];
-          variant = "macchiato";
-        };
-      };
-      cursorTheme = {
-        name = "Bibata-Modern-Ice";
-        package = pkgs.bibata-cursors;
-        size = 22;
+        package = pkgs.kanagawa-gtk-theme;
+        name = "Kanagawa-B";
       };
     };
 

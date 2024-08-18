@@ -197,6 +197,7 @@
     # Gtk
     gnome-themes-extra
     gtk-engine-murrine
+    kanagawa-gtk-theme
 
     # gitPkgs
     jep.fast-sl

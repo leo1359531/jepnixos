@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
 
 sudo nix-channel --update
-sudo nixos-rebuild switch
+
+pushd /etc/nixos  || exit 1
+sudo nix-build '<nixpkgs/nixos>' -A system --log-format bar-with-logs
+sudo ./result/bin/switch-to-configuration switch
+rm ./result
+popd || exit
+# sudo nixos-rebuild switch
