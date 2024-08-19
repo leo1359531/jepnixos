@@ -105,6 +105,9 @@ in {
             # This is annoying, because I can have a blank workspace, click Firefox from the launcher, and
             # then have Firefox open on some other workspace.
             "widget.disable-workspace-management" = true;
+
+            # disable translation popup panel
+            "browser.translations.automaticallyPopup" = false;
           };
           userChrome = ''
             #sidebar-header {
