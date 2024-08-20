@@ -53,16 +53,6 @@
     waybar.enable = true; # bar
   };
 
-  # Services
-  # services.avahi = {
-  #   nssmdns = true;
-  #   enable = true;
-  #   publish = {
-  #     enable = true;
-  #     userServices = true;
-  #     domain = true;
-  #   };
-  # };
   services = {
     resolved = {
       enable = true;
