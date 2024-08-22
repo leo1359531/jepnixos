@@ -64,7 +64,7 @@ in {
       # complete -cf doas enables autocomplete with doas
       initExtra = ''
         if [ "$TMUX" = "" ]; then tmux; fi
-        nofetch -UwU
+        # nofetch -UwU
       '';
       shellAliases = {
         add = "ssh-add ~/.ssh/starless";
@@ -72,12 +72,12 @@ in {
         duu = "du --max-depth=1 -h";
         edit = "cd /etc/nixos";
         ilmatar = "ssh -p 59743 vainamoinen@dreams.scatcat.online";
-        thor = "ssh -p 42938 benedetta@thor";
         j = "autojump";
         l = "exa -ahl";
         ll = "ls -l";
         lsblk = "lsblk -o NAME,FSTYPE,SIZE,FSUSED,LABEL,MOUNTPOINT,RM,RO,UUID";
         rr = "trash";
+        thor = "ssh -p 42938 benedetta@thor";
         update = "sudo nixos-rebuild switch";
         v = "nvim";
       };

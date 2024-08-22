@@ -91,10 +91,10 @@ in {
         extraPackages = with pkgs; [
           alacritty # backup terminal
           dunst # notification program
-          i3lock-fancy #default i3 screen locker
+          i3lock-color #default i3 screen locker
           libnotify # notification lib
           picom # compositor
-          polybar # bar
+          polybarFull # bar
           polybar-pulseaudio-control # pipewire on the bar
           rofi # launcher
           xss-lock # lock

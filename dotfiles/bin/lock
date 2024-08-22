@@ -1,5 +1,22 @@
 #!/usr/bin/env bash
 
-set -e
-i3lock-fancy -f ComicShannsMono-Nerd-Font
-xset dpms
+i3lock-color -i "$HOME/.config/imgs/swaylock/OOPSIE.png" -F -p win -e -f \
+  --verif-font="ComicShannsMono Nerd Font" \
+  --wrong-font="ComicShannsMono Nerd Font" \
+  --layout-size=15 \
+  --verif-size=50 \
+  --wrong-size=330 \
+  --inside-color=#00000000 \
+  --insidever-color=#00000000 \
+  --insidewrong-color=#00000000 \
+  --ring-color=#00000000 \
+  --ringver-color=00000000 \
+  --ringwrong-color=00000000 \
+  --line-color=00000000 \
+  --keyhl-color=00000000 \
+  --separator-color=#00000000 \
+  --verif-text="Trying your luck?" \
+  --wrong-text="ooppsie" \
+  --noinput-text="" \
+  --pass-screen \
+  --pass-volume \

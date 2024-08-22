@@ -171,7 +171,6 @@
     taplo # toml
     tree-sitter # for nvim
 
-
     # HTB
     aircrack-ng # wifi
     gobuster # file enumeration
@@ -193,6 +192,10 @@
     newt
     pv
     srm
+
+    # Drone
+    betaflight-configurator
+    edgetx
 
     # Gtk
     gnome-themes-extra

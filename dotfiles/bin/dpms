@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+if  xset q | grep -q Enabled;
+then
+  enabled=1
+else
+  enabled=0
+fi
+
+if [ "$1" == "--toggle" ];
+then
+  if [ $enabled == "1" ];
+  then
+    xset -dpms
+    echo ""
+  else
+    xset +dpms
+    echo ""
+  fi
+else
+  if [ $enabled == "1" ];
+  then
+    echo ""
+  else
+    echo ""
+  fi
+fi
