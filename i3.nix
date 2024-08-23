@@ -46,12 +46,16 @@ in {
           install_url = "https://addons.mozilla.org/firefox/downloads/latest/bitwarden-password-manager/latest.xpi";
           installation_mode = "force_installed";
         };
-        "{3c078156-979c-498b-8990-85f7987dd929}" = {
-          install_url = "https://addons.mozilla.org/firefox/downloads/latest/sidebery/latest.xpi";
+        "extension@tabliss.io" = {
+          install_url = "https://addons.mozilla.org/firefox/downloads/latest/tabliss/latest.xpi";
           installation_mode = "force_installed";
         };
-        "newtaboverride@agenedia.com" = {
-          install_url = "https://addons.mozilla.org/firefox/downloads/latest/new-tab-override/latest.xpi";
+        "{eceab40b-230a-4560-98ed-185ad010633f}" = {
+          install_url = "https://addons.mozilla.org/firefox/downloads/latest/nixos-packages-search-engine/latest.xpi";
+          installation_mode = "force_installed";
+        };
+        "{39ba6e88-6981-4e1f-9c68-591c9965633b}" = {
+          install_url = "https://addons.mozilla.org/firefox/downloads/latest/nixos-options-search-engine/latest.xpi";
           installation_mode = "force_installed";
         };
         "{9b84b6b4-07c4-4b4b-ba21-394d86f6e9ee}" = {
