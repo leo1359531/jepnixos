@@ -93,6 +93,7 @@
 
     # Gui
     baobab # disk space manager
+    btrfs-assistant # btrfs
     chromium # chromium
     evince # pdf
     firefox-wayland
