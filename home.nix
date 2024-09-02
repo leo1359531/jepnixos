@@ -56,6 +56,13 @@ in {
 
     programs.zsh = {
       enable = true;
+      plugins = [
+        {
+          name = "vi-mode";
+          src = pkgs.zsh-vi-mode;
+          file = "share/zsh-vi-mode/zsh-vi-mode.plugin.zsh";
+        }
+      ];
       enableCompletion = true;
       history.ignoreAllDups = true;
       history.ignoreSpace = true;

@@ -13,7 +13,6 @@
   # List packages installed in system profile. To search run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-
     home-manager
 
     # Cli
@@ -64,7 +63,6 @@
     stdenv # C compilers
     stress-ng # stress test
     texlive.combined.scheme-full # latex
-    thefuck # yeah
     trash-cli # trash for terminal
     tree # ls files in folders
     usbutils # lsusb
@@ -110,7 +108,6 @@
     strawberry # music payer
     thunderbird # mail
     virt-manager # virtual machines
-    zed-editor # IDE
 
     # Audio
     vmpk
