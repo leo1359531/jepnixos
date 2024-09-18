@@ -103,6 +103,7 @@
     mpv # media player
     mpvpaper # live wall paper
     owncloud-client # gui client for owncloud
+    owncloud-client # owncloud
     pavucontrol # audio control
     pcmanfm # file manager
     sonixd # music player
@@ -127,9 +128,6 @@
       with ps; [
       ]))
 
-    # Nodejs
-    nodejs
-
     # Rust
     cargo
     rustc
@@ -141,6 +139,7 @@
     #
     # nvim
     #
+    nodejs
     glow # md previewer
     tree-sitter # for nvim
 

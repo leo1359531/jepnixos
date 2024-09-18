@@ -6,29 +6,38 @@
 
 Lsp servers and formatters are downloaded manually, it's easier using nixOs, if you want to auto install them look at the [lsp-zero](%22https://github.com/VonHeikemen/lsp-zero.nvim%22) github
 
-##### Lsp servers
-* bashls
-* clangd
-* lua_ls
-* marksman
-* nil_ls
-* pyright
-* rust_analyzer
-* yamlls
 
-##### formatters
-* clang_format
-* clang_format
-* jq
-* stylua
-* mdformat
-* alejandra
-* isort
-* black
-* beautysh
-* codespell
-* trim_whitespace
-* trim_newlines
+### Base
+* nodejs
+* glow
+* tree-sitter # for nvim
+
+### Lsp
+* clang # clang
+* clang-tools # C, C++
+* lua-language-server # lua
+* marksman # markdown
+* matlab-language-server # matlab
+* nil # nix
+* nodePackages_latest.bash-language-server # bash
+* pyright # python
+* rust-analyzer # rust
+* shellcheck # checks shell scripts
+* yaml-language-server # yaml
+ 
+### Formatters
+* alejandra # nix
+* beautysh # sh
+* black # python
+* codespell # spell check
+* glow # md previewer
+* isort # python
+* jq # json
+* nodePackages_latest.prettier # prettier
+* python311Packages.mdformat # python
+* stylua # lua
+* taplo # toml
+* tree-sitter # for nvim
 
 ### Usage:
 
@@ -37,8 +46,6 @@ The leader key is `space`
 In order to navigate pls don't be a n\*\*b and use `hjkl`, this is not VScode
 
 `Up` and `Down` keys have been disabled since they are sent by the terminal when the touchpad is accidentally touched while typing -- really annoying
-
-at the moment h and l are disabled because I want to learn to usr e, b and w instead
 
 ### Keybindings
 
@@ -57,7 +64,7 @@ all the Keybindings are in normal mode, unless specified
 - esc: `jk` -> insert mode
 
 * format file: `<leader>g`
-* j next tab: `gt`
+* next tab: `gt`
 
 - comment current line: `<leader>c`
 - add comment at the end of the line: `<leader>a`
@@ -68,6 +75,9 @@ all the Keybindings are in normal mode, unless specified
 - yank to system keyboard: `cs`
 - paste from system keyboard: `cv`
 
+* move up half screen: `K`
+* move down half screen: `J`
+
 ### Plugins
 
 **nvim-tree** -> file manager
@@ -77,7 +87,7 @@ all the Keybindings are in normal mode, unless specified
 - back: `H`
 - toggle hidden files: `gh`
 
-*telescope*\* -> fuzzy searcher
+*telescope** -> fuzzy searcher
 
 - search in reccent files: `<leader>r`
 - search files in current dir: `<leader>ff`
@@ -94,7 +104,7 @@ all the Keybindings are in normal mode, unless specified
 
 **nvim-cmp** -> autocomplete
 
-- select highlighted: `<CR>` -> enter key
+- select highlighted: `<S-CR>` -> enter key
 - next: `<Tab>`
 - prev: `<S-Tab>`
 - close: `<C-e>`
@@ -129,7 +139,6 @@ to replace single quotes with double of a Word is: `csiW'"`
 - do action *n* times: `*n*<action>`
 - undo: `u`
 - redo: `<C-r>`
-- merge two lines: `<S-j>`
 
 delete 3 lines: `3dd` -> for more info about dd keep reading
 
