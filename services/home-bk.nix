@@ -16,7 +16,7 @@
     };
 
     services.homebk = {
-      enable = false;
+      enable = true;
       path = [
         pkgs.bash
         pkgs.busybox

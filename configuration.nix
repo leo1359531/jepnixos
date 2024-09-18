@@ -3,7 +3,6 @@
     # ./sway.nix # all sway configs
     ./audio.nix
     ./boot.nix # boot settings
-    ./docker.nix # docker
     ./enable.nix # services and special pkgs
     ./environment.nix # environment settings IMPORTANT
     ./hardware-configuration.nix # Include the results of the hardware scan.

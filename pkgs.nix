@@ -51,6 +51,7 @@
     neofetch # system info
     nix-output-monitor # output monitor nix
     num-utils # random
+    openjdk # java
     openvpn # vpn client
     pamixer # set volume
     pciutils # pci ultis
@@ -117,6 +118,7 @@
     # Non-free
     bambu-studio
     matlab
+    modrinth-app
     spotify
     telegram-desktop
 
@@ -201,12 +203,13 @@
     kanagawa-gtk-theme
 
     # gitPkgs
-    jep.fast-sl
-    jep.modprobed-db
     # jep.ngspice
+    jep.fast-sl
+    # jep.forge-mtg
+    jep.jepmap
+    jep.modprobed-db
     jep.nofetch
     jep.setPL
-    jep.jepmap
   ];
 
   # Fonts

@@ -43,7 +43,7 @@ in {
         duu = "du --max-depth=1 -h";
         edit = "cd /etc/nixos";
         ilmatar = "ssh -p 59743 vainamoinen@dreams.scatcat.online";
-        thor = "ssh -p 42938 benedetta@thor";
+        thor = "ssh -p2938 benedetta@thor";
         j = "autojump";
         l = "exa -ahl";
         ll = "ls -l";
@@ -120,7 +120,7 @@ in {
           '';
           search = {
             force = true;
-            default = "Google";
+            default = "duckduckgo";
           };
         };
       };
