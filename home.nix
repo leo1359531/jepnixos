@@ -42,8 +42,6 @@ in {
         c = "clear && fast-sl && clear";
         duu = "du --max-depth=1 -h";
         edit = "cd /etc/nixos";
-        ilmatar = "ssh -p 59743 vainamoinen@dreams.scatcat.online";
-        thor = "ssh -p2938 benedetta@thor";
         j = "autojump";
         l = "exa -ahl";
         ll = "ls -l";
@@ -78,7 +76,6 @@ in {
         c = "clear && fast-sl && clear";
         duu = "du --max-depth=1 -h";
         edit = "cd /etc/nixos";
-        ilmatar = "ssh -p 59743 vainamoinen@dreams.scatcat.online";
         j = "autojump";
         l = "exa -ahl";
         ll = "ls -l";
