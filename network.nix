@@ -2,13 +2,13 @@
   # Enable networking
   networking = {
     hostName = "starless";
-    wireless.iwd.enable = true;
-    # networkmanager.enable = true;
+    # wireless.iwd.enable = true;
+    networkmanager.enable = true;
   };
 
   networking.firewall = {
     enable = true;
-    allowedTCPPorts = [18000];
+    # allowedTCPPorts = [18000];
   };
 
   # Bluetooth

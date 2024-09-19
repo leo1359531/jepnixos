@@ -116,6 +116,13 @@
     odin2
     qpwgraph
 
+    # Zsh
+    zsh-autocomplete
+    zsh-autoenv
+    zsh-autopair
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+
     # Non-free
     bambu-studio
     matlab

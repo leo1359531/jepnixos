@@ -15,9 +15,13 @@
 
   programs.zsh = {
     enable = true;
+    autosuggestions.async = true;
+    zsh-autoenv.enable = true;
     ohMyZsh = {
       enable = true;
-      plugins = [];
+      plugins = [
+        "autojump"
+      ];
       theme = "robbyrussell";
     };
   };

@@ -66,6 +66,7 @@ in {
       history.ignoreSpace = true;
       history.share = true;
       syntaxHighlighting.enable = true;
+
       # complete -cf doas enables autocomplete with doas
       initExtra = ''
         if [ "$TMUX" = "" ]; then tmux; fi
