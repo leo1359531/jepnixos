@@ -12,6 +12,8 @@ in {
         nofetch = callPackage ./nofetch.nix {};
         setPL = callPackage ./setPL.nix {};
         forge-mtg = callPackage ./forge.nix {};
+        lis = callPackage ./lis.nix {};
+
       };
     })
   ];

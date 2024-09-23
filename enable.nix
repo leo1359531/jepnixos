@@ -1,11 +1,14 @@
 {pkgs, ...}: {
   # Virt-Manager
-  virtualisation.docker.enable = false;
+  virtualisation.docker.enable = true;
   virtualisation.libvirtd.enable = true;
   programs.dconf.enable = true;
 
   # SSH angent
   programs.ssh.startAgent = true;
+
+  # nix-ld
+  programs.nix-ld.enable = true;
 
   # Neovim
   programs.neovim = {
