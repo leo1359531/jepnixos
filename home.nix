@@ -42,7 +42,6 @@ in {
         c = "clear && fast-sl && clear";
         duu = "du --max-depth=1 -h";
         edit = "cd /etc/nixos";
-        j = "autojump";
         l = "exa -ahl";
         ll = "ls -l";
         lsblk = "lsblk -o NAME,FSTYPE,SIZE,FSUSED,LABEL,MOUNTPOINT,RM,RO,UUID";
@@ -77,7 +76,6 @@ in {
         c = "clear && fast-sl && clear";
         duu = "du --max-depth=1 -h";
         edit = "cd /etc/nixos";
-        j = "autojump";
         l = "exa -ahl";
         ll = "ls -l";
         lsblk = "lsblk -o NAME,FSTYPE,SIZE,FSUSED,LABEL,MOUNTPOINT,RM,RO,UUID";

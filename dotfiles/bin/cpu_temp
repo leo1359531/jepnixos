@@ -1,7 +1,6 @@
-# !/usr/bin/env bash
+#!/usr/bin/env bash
 
-TEMP_FILE=/sys/class/hwmon/hwmon4/temp1_input
-TEMP=$(cat "$TEMP_FILE")
+TEMP="$(cat "$(find -L /sys/class/hwmon -maxdepth 2 -name name -exec grep -l acpitz {} \; 2>/dev/null | sed 's/name//')"temp1_input)"
 TEMP_FORMATTED=$(bc <<< "scale = 0;($TEMP / 1000)")"°C";
 
 

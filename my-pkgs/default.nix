@@ -13,7 +13,7 @@ in {
         setPL = callPackage ./setPL.nix {};
         forge-mtg = callPackage ./forge.nix {};
         lis = callPackage ./lis.nix {};
-
+        eigen = callPackage ./eigen.nix {};
       };
     })
   ];

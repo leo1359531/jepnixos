@@ -125,6 +125,7 @@
 
     # Non-free
     bambu-studio
+    discord
     matlab
     modrinth-app
     spotify
@@ -134,10 +135,6 @@
     (python3.withPackages (ps:
       with ps; [
       ]))
-
-    # Cpp
-    eigen # matrix lib
-    tbb
 
     # Rust
     cargo
@@ -216,7 +213,6 @@
     # jep.ngspice
     jep.fast-sl
     # jep.forge-mtg
-    jep.lis
     jep.jepmap
     jep.modprobed-db
     jep.nofetch
