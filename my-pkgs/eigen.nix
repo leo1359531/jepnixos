@@ -3,7 +3,7 @@
   fetchFromGitLab,
 }:
 stdenvNoCC.mkDerivation {
-  pname = "eigen";
+  pname = "my-eigen";
   version = "3.4.0";
 
   src = fetchFromGitLab {
@@ -15,6 +15,7 @@ stdenvNoCC.mkDerivation {
 
   installPhase = ''
     mkdir -p $out/include
-    mv Eigen $out/include
+    cp -r Eigen $out/include
+    cp -r unsupported $out/include
   '';
 }

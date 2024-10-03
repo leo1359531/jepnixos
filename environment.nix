@@ -4,7 +4,7 @@
     "application/pdf" = "firefox.desktop";
   };
   environment.variables = rec {
-    EDITOR = "nvim";
+    EDITOR = "zededitor";
     BROWSER = "firefox";
     TERMINAL = "wezterm";
 

@@ -1,6 +1,10 @@
 {pkgs, ...}: {
   # Virt-Manager
   virtualisation.docker.enable = true;
+  virtualisation.docker.rootless = {
+    enable = true;
+    setSocketVariable = true;
+  };
   virtualisation.libvirtd.enable = true;
   programs.dconf.enable = true;
 

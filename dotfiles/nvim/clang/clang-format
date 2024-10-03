@@ -11,7 +11,7 @@ AlignOperands: Align
 AlignTrailingComments: true
 
 # On line
-# AllowShortIfStatementsOnASingleLine: WithoutElse
+AllowShortIfStatementsOnASingleLine: WithoutElse
 
 KeepEmptyLinesAtTheStartOfBlocks: false
 KeepEmptyLinesAtEOF: false

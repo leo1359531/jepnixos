@@ -1,19 +1,12 @@
-{pkgs, ...}: {
-  nixpkgs.overlays = let
-    nix-matlab = import (builtins.fetchTarball "https://gitlab.com/doronbehar/nix-matlab/-/archive/master/nix-matlab-master.tar.gz");
-  in [
-    nix-matlab.overlay
-    (
-      final: prev: {
-        # Your own overlays...
-      }
-    )
-  ];
-
+{pkgs, ...}: let
+  unstable = import <nixos-unstable> {config = {allowUnfree = true;};};
+in {
   # List packages installed in system profile. To search run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     home-manager
+
+    unstable.zed-editor
 
     # Cli
     alsa-lib # library for alsa
@@ -72,7 +65,6 @@
     wayvnc # vnc server for wayland
     wget # retrieve files using HTTP etc.
     wirelesstools # tools
-    zfs # cool file system
 
     #  Archives
     p7zip
@@ -126,7 +118,6 @@
     # Non-free
     bambu-studio
     discord
-    matlab
     modrinth-app
     spotify
     telegram-desktop
@@ -156,7 +147,6 @@
     clang-tools # C, C++
     lua-language-server # lua
     marksman # markdown
-    matlab-language-server # matlab
     nil # nix
     nodePackages_latest.bash-language-server # bash
     pyright # python
@@ -213,6 +203,8 @@
     # jep.ngspice
     jep.fast-sl
     # jep.forge-mtg
+    # jep.eigen
+    jep.lis
     jep.jepmap
     jep.modprobed-db
     jep.nofetch
