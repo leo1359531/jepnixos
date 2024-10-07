@@ -4,16 +4,16 @@ in {
   nixpkgs.overlays = [
     (final: prev: {
       jep = {
+        eigen = callPackage ./eigen.nix {};
         fast-sl = callPackage ./fast-sl.nix {};
+        forge-mtg = callPackage ./forge.nix {};
         jepmap = callPackage ./jepmap.nix {};
         kanagawa-gtk = callPackage ./kanagawa-gtk.nix {};
+        lis = callPackage ./lis.nix {};
         modprobed-db = callPackage ./modprobed-db.nix {};
         ngspice = callPackage ./ngspice.nix {};
         nofetch = callPackage ./nofetch.nix {};
         setPL = callPackage ./setPL.nix {};
-        forge-mtg = callPackage ./forge.nix {};
-        lis = callPackage ./lis.nix {};
-        eigen = callPackage ./eigen.nix {};
       };
     })
   ];

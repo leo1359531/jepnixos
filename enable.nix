@@ -15,10 +15,10 @@
   programs.nix-ld.enable = true;
 
   # Neovim
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-  };
+  # programs.neovim = {
+    # enable = true;
+    # defaultEditor = true;
+  # };
 
   programs.zsh = {
     enable = true;

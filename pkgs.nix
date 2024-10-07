@@ -7,6 +7,7 @@ in {
     home-manager
 
     unstable.zed-editor
+    unstable.neovim
 
     # Cli
     alsa-lib # library for alsa
@@ -138,35 +139,34 @@ in {
     #
     # nvim
     #
-    nodejs
-    glow # md previewer
-    tree-sitter # for nvim
+    unstable.nodejs
+    unstable.glow # md previewer
+    unstable.tree-sitter # for nvim
 
     # lsp
-    clang # clang
-    clang-tools # C, C++
-    lua-language-server # lua
-    marksman # markdown
-    nil # nix
-    nodePackages_latest.bash-language-server # bash
-    pyright # python
-    rust-analyzer # rust
-    shellcheck # checks shell scripts
-    yaml-language-server # yaml
+    unstable.clang # clang
+    unstable.clang-tools # C, C++
+    unstable.lua-language-server # lua
+    unstable.marksman # markdown
+    unstable.nil # nix
+    unstable.nodePackages_latest.bash-language-server # bash
+    unstable.pyright # python
+    unstable.rust-analyzer # rust
+    unstable.shellcheck # checks shell scripts
+    unstable.yaml-language-server # yaml
 
     # formatters
-    alejandra # nix
-    beautysh # sh
-    black # python
-    codespell # spell check
-    glow # md previewer
-    isort # python
-    jq # json
-    nodePackages_latest.prettier # prettier
-    python311Packages.mdformat # python
-    stylua # lua
-    taplo # toml
-    tree-sitter # for nvim
+    unstable.alejandra # nix
+    unstable.beautysh # sh
+    unstable.black # python
+    unstable.codespell # spell check
+    unstable.glow # md previewer
+    unstable.isort # python
+    unstable.jq # json
+    unstable.nodePackages_latest.prettier # prettier
+    unstable.python311Packages.mdformat # python
+    unstable.stylua # lua
+    unstable.taplo # toml
 
     # HTB
     aircrack-ng # wifi

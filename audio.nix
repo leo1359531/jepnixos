@@ -19,5 +19,6 @@
       "default.clock.quantum-floor" = 32;
     };
   };
-  # hardware.pulseaudio.zeroconf.discovery.enable = true;
+  hardware.pulseaudio.zeroconf.discovery.enable = true;
+  services.avahi.enable = true;
 }

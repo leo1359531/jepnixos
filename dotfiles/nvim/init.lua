@@ -174,6 +174,8 @@ require("lazy").setup({
   -- No config
   { "tpope/vim-fugitive" }, -- git command from vim
 
+  -- MarkdownPreview
+
   -- Various
   { "HiPhish/rainbow-delimiters.nvim" },
   { "LnL7/vim-nix" }, -- better support for nix
@@ -644,7 +646,7 @@ vim.g.rainbow_delimiters = {
 
 ----------------------------------------------------
 
--- LSP servers with lsp_zero
+-- LSP servers
 
 ----------------------------------------------------
 
@@ -762,7 +764,7 @@ local luasnip = require("luasnip")
 require("luasnip.loaders.from_vscode").lazy_load()
 luasnip.config.setup({})
 require("cmp_dictionary").setup({
-  paths = { "$HOME/.config/nvim/dicts/en.dict" },
+  paths = { "/home/leo/.config/nvim/dicts/en.dict" },
   exact_length = 2,
   first_case_insensitive = true,
 })
@@ -774,15 +776,11 @@ cmp.setup({
     end,
   },
   mapping = cmp.mapping.preset.insert({
-    ["<C-n>"] = cmp.mapping.select_next_item(),
-    ["<C-p>"] = cmp.mapping.select_prev_item(),
-    ["<C-d>"] = cmp.mapping.scroll_docs(-4),
-    ["<C-f>"] = cmp.mapping.scroll_docs(4),
-    ["<C-Space>"] = cmp.mapping.complete({}),
     ["<CR>"] = cmp.mapping.confirm({
       behavior = cmp.ConfirmBehavior.Replace,
       select = true,
     }),
+    ["<C-e>"] = cmp.mapping.abort(),
     ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
